@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // strictly, with a known vulnerability (CVE-2021-44228): disabled by default, but gets a vulnerability fix
+    implementation('org.apache.logging.log4j:log4j-core') {
+        version {
+            strictly '2.14.1'
+        }
+    }
+
+    // strictly, no known vulnerability: disabled by default, no PR
+    implementation('org.slf4j:slf4j-api') {
+        version {
+            strictly '1.7.25'
+        }
+    }
+
+    // require: same as a plain version, updated as usual
+    implementation('com.google.guava:guava') {
+        version {
+            require '31.0-jre'
+        }
+    }
+
+    // strictly range + prefer (the example from discussion #45481): skipped as multiple-constraint-dep
+    implementation('commons-io:commons-io') {
+        version {
+            strictly '[2.6, 3.0['
+            prefer '2.6'
+        }
+    }
+}
