@@ -24,7 +24,7 @@ dependencies {
     // require: same as a plain version, updated as usual
     implementation('com.google.code.gson:gson') {
         version {
-            require '2.10'
+            require '2.14.0'
         }
     }
 
