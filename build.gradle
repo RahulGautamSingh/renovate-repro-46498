@@ -10,7 +10,7 @@ dependencies {
     // strictly, with a known vulnerability (CVE-2021-44228): disabled by default, but gets a vulnerability fix
     implementation('org.apache.logging.log4j:log4j-core') {
         version {
-            strictly '2.14.1'
+            strictly '2.25.4'
         }
     }
 
