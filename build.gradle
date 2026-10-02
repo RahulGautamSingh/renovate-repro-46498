@@ -22,9 +22,9 @@ dependencies {
     }
 
     // require: same as a plain version, updated as usual
-    implementation('com.google.guava:guava') {
+    implementation('com.google.code.gson:gson') {
         version {
-            require '31.0-jre'
+            require '2.10'
         }
     }
 
