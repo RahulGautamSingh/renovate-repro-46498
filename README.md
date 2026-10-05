@@ -42,7 +42,7 @@ On `main`, the same run would autoclose both PRs, because the dependencies are n
 }
 ```
 
-Run with #46498 (91d690ee0b): `slf4j-api` is no longer disabled and gets regular update PRs, which rewrite the `strictly` version:
+Run with #46498 (193b2b4b6f): `slf4j-api` is no longer disabled and gets regular update PRs, which rewrite the `strictly` version:
 
 - [#5](../../pull/5) `strictly '1.7.25'` → `strictly '1.7.36'`
 - [#6](../../pull/6) `strictly '1.7.25'` → `strictly '2.0.20'`
