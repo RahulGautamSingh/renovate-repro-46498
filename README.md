@@ -29,3 +29,20 @@ Run with Renovate from source against [`648bc88`](../../commit/648bc881ce909bef6
 
 With #46498, Renovate logs `Dependency: org.apache.logging.log4j:log4j-core, is disabled by default, but has a vulnerability alert`.
 On `main`, the same run would autoclose both PRs, because the dependencies are no longer found.
+
+## Opt-in rule
+
+[`efd06e5`](../../commit/efd06e5) adds the package rule from the [Gradle manager docs](https://github.com/renovatebot/renovate/blob/feat/gradle-rich-versions/lib/modules/manager/gradle/readme.md), which turns `strictly` and `prefer` constraints back on for regular updates:
+
+```json
+{
+  "matchManagers": ["gradle"],
+  "matchJsonata": ["managerData.versionConstraint in ['strictly', 'prefer']"],
+  "enabled": true
+}
+```
+
+Run with #46498 (91d690ee0b): `slf4j-api` is no longer disabled and gets regular update PRs, which rewrite the `strictly` version:
+
+- [#5](../../pull/5) `strictly '1.7.25'` → `strictly '1.7.36'`
+- [#6](../../pull/6) `strictly '1.7.25'` → `strictly '2.0.20'`
