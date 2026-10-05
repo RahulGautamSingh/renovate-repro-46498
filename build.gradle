@@ -17,7 +17,7 @@ dependencies {
     // strictly, no known vulnerability: disabled by default, no PR
     implementation('org.slf4j:slf4j-api') {
         version {
-            strictly '1.7.25'
+            strictly '1.7.36'
         }
     }
 
